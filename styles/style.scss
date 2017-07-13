@@ -1,0 +1,233 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+// SCSS Variables
+
+$darkgreen: #375827;
+$midgreen: #537343;
+$palegreen: #C8D07F;
+$palergreen: #EBF3D2;
+$chameleon: #1f6890;
+
+//*****//
+
+h1 {
+	text-transform: uppercase;
+	color: $palegreen;
+	margin: 0;
+	font-family: "Oswald", sans-serif;
+	font-size: 4.4rem;
+	line-height: 1;
+}
+
+a {
+	position: relative;
+	z-index: 3;
+	padding-left: 5%;
+	text-decoration: none;
+	line-height: 200%;
+	color: darkgrey;
+	display: inline-block;
+	animation: fade 9s ease-in;
+	transition: transform 0.3s ease-in;
+}
+
+h1 span {
+	display: block;
+}
+
+a:hover {
+	transform: scale(1.1);
+	color: $palergreen;
+}
+
+.mainscreen {
+	background-color: $darkgreen;
+	position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrapper	{
+	position: relative;
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.title {
+	padding-top: 10%;
+	line-height: 1;
+}
+
+.titletop {
+	letter-spacing: 13px;
+	animation: fadeInDown 4s ease-in-out;
+	padding-top: 75px;
+}
+
+.titlebottom {
+	font-size: 10rem;
+	letter-spacing: -10px;
+	transform: scaleY(1.2);
+  	transform-origin: 0 0;
+  	animation: stretch 4s ease-out;
+  	z-index: 3;
+  	position: relative;
+  	line-height: 0.73;
+	}
+
+.hinge {
+	animation: hinge 2.5s;
+	animation-fill-mode: forwards; 
+}
+
+.play {
+	top: 60%;
+	right: 0;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	position: absolute;
+	z-index: 3;
+	animation: play 6s ease-in;
+}
+
+.circle {
+	position: absolute;
+	top: 60%;
+	right: 0;
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	z-index: 1;
+	background-color: $chameleon;
+}
+
+.deployCircle {
+	animation: grow 5s linear;
+	animation-fill-mode: forwards; 
+	transition: animation 5s linear; 
+}
+
+.story {
+	font-family: "Special Elite", serif;
+	font-size: 1.5rem;
+	line-height: 150%;
+	color: white;
+	text-shadow: 1px 1px black;
+	background-color: $darkgreen;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+}
+
+.storyfinal {
+	font-family: "Special Elite", serif;
+	font-size: 1.5rem;
+	line-height: 150%;
+	color: white;
+	text-shadow: 1px 1px black;
+	background-color: $darkgreen;
+	min-height: 100vh;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;	
+}
+
+.choices {
+	animation: fade 3s ease-in;
+}
+
+.wrapper2	{
+	position: relative;
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 10%;
+}
+
+.bigCircle {
+	position: absolute;
+	right: -45vw;
+	bottom: -60vw;
+	height: 100vw;
+	width: 100vw;
+	border-radius: 50%;
+	background-color: $midgreen;
+	z-index: 1;
+	animation: pulse 5s infinite ease-in-out;
+	opacity: 0.8;
+}
+
+.text {
+	position: relative;
+	animation: fadeIn 3s linear;
+	z-index: 9;
+}
+
+.nudge {
+	text-align: center;
+	color: lightgrey;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	padding-top: 5px;
+	margin: 2% 20%;
+	text-shadow: none;
+	animation: fade 10s ease-in;
+	z-index: 9;
+	background-color: rgba(80, 72, 72, 0.27);
+}
+
+.step1 {
+	z-index: 3;
+}
+
+.step2 {
+	z-index: 2;
+}
+
+.step3 {
+	z-index: 1;
+}
+
+.image1 {
+	position: relative;
+	display: block;
+	left: 20vw;
+	max-width: 75vw;
+	bottom: 10vh;
+	opacity: 0.4;
+	padding-top: 2%;
+	transform: rotate(7deg);
+}
+
+.image1a {
+	bottom: 20vh;
+}
+
+.image2 {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 5%;
+	display: block;
+	max-width: 75vw;
+	opacity: 0.4;
+}
+
+// Partials //
+
+@import "keyframes";
+@import "_mediaQueries.scss"

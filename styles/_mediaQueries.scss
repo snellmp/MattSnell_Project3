@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+
+	h1 {
+		font-size: 3.8rem;
+	}
+
+	.wrapper {
+		max-width: 95%;
+	}
+
+	.title {
+		text-align: center;
+		padding-top: 25%;
+	}
+
+	.titletop {
+		padding-left: 10px;
+	}
+
+	.titlebottom {
+		font-size: 9rem;
+		}
+
+	.hinge {
+		animation: hinge 2.5s;
+		animation-fill-mode: forwards; 
+	}
+
+	.play {
+		top: 140%;
+		left: 45%;
+		padding-left: 0;
+		position: absolute;
+	}
+
+
+	.circle {
+		position: absolute;
+		top: 140%;
+		left: 35%;
+		opacity: 0;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		z-index: 1;
+		background-color: $chameleon;
+	}
+}
+
+@media (max-width: 560px) {
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	a {
+		padding: 2%;
+	}
+
+	.title {
+		padding-top: 10%;
+	}
+
+	.titletop {
+		letter-spacing: 8px;
+	}
+
+	.titlebottom {
+		font-size: 5.7rem;
+		}
+	
+	.play {
+		font-size: 1.5rem;
+	}
+
+	.story, .storyfinal {
+		font-size: 0.8rem;
+	}
+
+	.nudge {
+		font-size: 0.8rem;
+		padding-top: 5%;
+	}
+
+}
